@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root{
+    --background-- :rgba(36, 36, 36, 0.653);
+}
+.mainDiv{
+    display: flex;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+  
+}
+.sidebar {
+  background-color: var(--background--);
+  color: whitesmoke;
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+  
+}
+.sidebarList,
+.heroLogo {
+  list-style: none;
+  font-size: 25px;
+}
+.sidebarList li,
+.heroLogo {
+  padding: 20px;
+  transition: background 0.3s ease,color .3s ease;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.sidebarList li a{
+    color:white;
+    text-decoration: none;
+}
+.sidebarList li:hover {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(8px);
+  background-color: rgba(206, 204, 204, 0.295);
+  
+}
+.sidebarList li:hover a {
+  color: cadetblue;
+  
+}
+.heroLogo{
+  font-size: 35px;
+  
+}
+.sidebar .copyright{
+    margin-top: auto;
+    color: gray
+}
+.hamburger{
+
+    margin: 25px;
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+    z-index:1000;
+}
+
+.hamburger span{
+    width:30px;
+    height:3px;
+    background:white;
+    border-radius:20px;
+    transition:.3s;
+}
+@media (max-width:950px){
+.hamburger{
+    display:flex;
+    z-index: 1000;
+    
+}
+
+.sidebar{
+    position:fixed;
+    left:-100%;
+    top:0;
+    transition:.4s;
+    z-index:999;
+    margin-top: 70px;
+    height: 95%;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+}

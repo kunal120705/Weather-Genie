@@ -1,0 +1,267 @@
+* {
+    color: white;
+}
+
+:root {
+    --background--: rgba(36, 36, 36, 0.479);
+    --tempbg--: rgba(41, 41, 41, 0.769);
+}
+
+
+body {
+    background-color: rgb(36, 36, 36);
+    display: flex;
+
+
+}
+
+.herosection {
+    
+    flex: 1;
+    width: 100%;
+    margin: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+    ;
+}
+
+.navbar input {
+    background-color: var(--background--) ;
+    color: white;
+    width: 280px;
+    height: 30x;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 40px;
+}
+
+.time {
+    font-size: 50px;
+
+}
+
+.tempsection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.otherInfo {
+    font-size: 20px;
+    flex: 1;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.heroWeather {
+    background-color: rgba(23, 23, 23, 0.281);
+    z-index: 10;
+    position: relative;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;
+    height: 50vh;
+   
+    justify-content: space-evenly;
+}
+
+.heroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    border-radius: 20px;
+    filter: brightness(80%);
+}
+.cityname{
+    display: flex   ;
+}
+
+.cityname ,.otherInfo h1{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 50px;
+    font-weight: 1000;
+    color: cadetblue;
+}
+
+.cityname::first-letter {
+    text-transform: uppercase;
+}
+
+.mainTemp {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+    gap: 10px;
+    padding: 20px;
+    flex: 1;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.time {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchbtn {
+    background-color: var(--background--);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+
+
+}
+
+.searchbtn:hover {
+    background-color: rgba(36, 36, 36, 0.5);
+
+}
+
+.feelslike {
+    font-size: 20px;
+}
+
+.datetime {
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.sameDayforecast {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+
+
+}
+.section1,.section2{
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.otherInfo {
+    display: flex;
+    gap: 20px;
+   
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+    padding:  20px 20px;
+    border-radius: 15px;
+    overflow: auto;
+    
+}
+.otherInfo::-webkit-scrollbar{
+    display: none;             
+}
+.perDayForecast{
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    
+    
+}
+
+.forecard,.day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+.day{
+    width: 200px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+    background-color: rgba(20, 20, 20, 0.546);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(8px);
+}
+.temp{
+    font-size: 30px;
+}
+
+
+@media (max-width: 950px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar input {
+        width: 100%;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .searchbtn {
+        padding: 10px 16px;
+    }
+
+    .herosection {
+        width: 500px;
+    }
+
+    .sameDayforecast {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .forecard {
+        width: 150px;
+        flex-shrink: 0;
+    }
+
+    .mainTemp {
+        font-size: smaller;
+    }
+
+    .cityname {
+        font-size: 30px;
+    }
+
+    .time {
+        display: none;
+    }
+    .mainTemp{
+        margin-right: auto;
+
+    }
+
+    .otherInfo {
+        font-size: smaller;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+    .perDayForecast{
+        margin-left: 30px;
+    }
+}
