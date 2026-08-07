@@ -11,12 +11,17 @@
 body {
     background-color: rgb(36, 36, 36);
     display: flex;
-
+    width:100%;
+    min-height:100%;
+    background-image:url("bgimage1.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 
 }
 
 .herosection {
-    
     flex: 1;
     width: 100%;
     margin: 10px;
@@ -75,15 +80,20 @@ body {
     justify-content: space-evenly;
 }
 
-.heroImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    inset: 0;
-    z-index: -10;
-    border-radius: 20px;
-    filter: brightness(80%);
+
+.heroImg{
+    position:fixed;
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    object-fit:cover;
+
+    z-index:-1;
+}
+.mainDiv{
+    min-height:100vh;
 }
 .cityname{
     display: flex   ;
@@ -214,6 +224,10 @@ body {
         display: flex;
         align-items: center;
         gap: 10px;
+    }
+    .herosection img{
+        width: 100%;
+        height: 100%;
     }
 
     .navbar input {
