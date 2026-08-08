@@ -199,7 +199,7 @@ body {
 }
 
 .day {
-    width: 200px;
+    width: 190px;
     flex-shrink: 0;
     margin-bottom: 30px;
     background-color: rgba(20, 20, 20, 0.546);
@@ -275,7 +275,4 @@ body {
         overflow-x: auto;
     }
 
-    .perDayForecast{
-        margin: 20px;
-    }
 }
