@@ -23,9 +23,6 @@ body {
 
 .herosection {
     flex: 1;
-   
-    
-
 }
 
 .navbar {
@@ -277,6 +274,7 @@ body {
         justify-content: flex-start;
         align-items: center;
         margin:10px 20px;
+        flex:1;
        
     }
     .day{
