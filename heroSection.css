@@ -1,5 +1,6 @@
 * {
     color: white;
+    font-family: "Share Tech Mono", monospace;
 }
 
 :root {
@@ -43,7 +44,7 @@ body {
     background-color: var(--background--);
     color: white;
     width: 280px;
-    height: 30x;
+    height: 30px;
     font-size: 20px;
     border-radius: 15px;
     border: none;
@@ -78,18 +79,14 @@ body {
     border-radius: 20px;
     flex: 1;
     height: 50vh;
-    justify-content: space-evenly;
 }
 
 .heroImg {
     position: fixed;
     inset: 0;
-
     width: 100vw;
     height: 100vh;
-
     object-fit: cover;
-
     z-index: -1;
 }
 
@@ -97,18 +94,14 @@ body {
     min-height: 100vh;
 }
 
-.cityname {
-    display: flex;
-}
-
 .cityname,
 .otherInfo h1 {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 50px;
     font-weight: 1000;
-    color: cadetblue;
+    color: rgb(193, 234, 239);
 }
-
+.cityname{
+    font-size: 50px;
+}
 .cityname::first-letter {
     text-transform: uppercase;
 }
@@ -116,7 +109,6 @@ body {
 .mainTemp {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(8px);
-    gap: 10px;
     padding: 20px;
     flex: 1;
     height: 150px;
@@ -177,10 +169,11 @@ body {
 
 .perDayForecast {
     display: grid;
-    gap: 20px;
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     justify-content: center;
     align-items: center;
+    font-size: 30px;
 }
 
 .forecard,
@@ -211,21 +204,20 @@ body {
     font-size: 30px;
 }
 
+
+
 @media (max-width: 950px) {
+    body{
+        background-image: url(heroImgMobile.png);
+    }
     .navbar {
         display: flex;
         position: fixed;
         top: 0;
         align-items: center;
-        position: fixed;
         padding: 0px 10px;
-        flex:1;
+        flex: 1;
         background: none;
-    }
-
-    .herosection img {
-        width: 100%;
-        height: 100%;
     }
 
     .navbar input {
@@ -254,23 +246,21 @@ body {
     }
 
     .mainTemp {
-        font-size: smaller;
+        font-size: x-small;
     }
 
-    .cityname {
-        font-size: 30px;
-    }
+
 
     .time {
         display: none;
     }
 
     .mainTemp {
-        margin-right: auto;
+        flex:1;
     }
+    
 
     .otherInfo {
-        font-size: smaller;
         overflow-y: auto;
         overflow-x: auto;
     }
